@@ -78,13 +78,16 @@ intel_image_classification/
    conda activate intel_cnn
 
 2. (Once) Create Kernel for jupyter
-python -m ipykernel install --user --name intel_cnn --display-name "Python (intel_cnn)"
+
+    ```bash
+    python -m ipykernel install --user --name intel_cnn --display-name "Python (intel_cnn)"
 
 3. Download the dataset:
 
 
 4. Launch Jupyter Lab:
-run_local.bat
+    ```bash
+    run_local.bat
 
 5. Google Colab (for model training)
     1. Upload the project folder to your Drive or GitHub.
@@ -97,7 +100,8 @@ run_local.bat
         Move them to your local folders to run evaluation.
 
 6. Evaluation
-python -m src.evaluate
+    ```bash
+    python -m src.evaluate
 
 This script:
     1. Loads each model in saved_models/
@@ -118,7 +122,6 @@ base_model	0.8729
 ✅ Corresponding .html exports
 ✅ README.md
 ✅ Final accuracy plot (reports/figures/val_comparison.png)
-❌ No need to submit: raw images, .npy, .h5 models, or seg_pred
 
 8. Requirements
 Python 3.10
