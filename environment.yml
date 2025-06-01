@@ -1,0 +1,13 @@
+name: intel_cnn
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - tensorflow==2.15
+      - keras-tuner
+      - matplotlib
+      - pandas
+      - scikit-learn
+      - ipykernel           # so VS Code/Jupyter can pick the env up
