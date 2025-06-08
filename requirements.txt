@@ -1,0 +1,20 @@
+matplotlib
+numpy
+scipy
+pandas
+scikit-learn
+seaborn
+statsmodels
+scikit-image
+scikit_learn
+tensorflow
+opencv-python
+keras
+torch
+torchvision
+# Optional packages for additional functionality
+opencv-python
+pillow
+# Optional packages for specific tasks
+nltk
+spacy

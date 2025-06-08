@@ -1,5 +1,10 @@
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from .config import IMG_SIZE, BATCH, SEED, CLASSES, DATA_RAW
+
+IMG_SIZE = (150, 150)
+BATCH = 32
+SEED = 42
+TRAIN_DIR = "/Users/javiermolinaespelt/Documents/Master IA/deeplearningT9/data/raw/seg_train/seg_train"
+TEST_DIR = "/Users/javiermolinaespelt/Documents/Master IA/deeplearningT9/data/raw/seg_test/seg_test"
 from pathlib import Path
 
 def make_generators(validation_split=0.20, augment=False):
@@ -22,7 +27,7 @@ def make_generators(validation_split=0.20, augment=False):
     test_datagen  = ImageDataGenerator(rescale=1./255)
 
     train_gen = train_datagen.flow_from_directory(
-        DATA_RAW / "Seg_train",
+        TRAIN_DIR,
         target_size=IMG_SIZE,
         batch_size=BATCH,
         class_mode="categorical",
@@ -30,7 +35,7 @@ def make_generators(validation_split=0.20, augment=False):
         seed=SEED)
 
     val_gen = train_datagen.flow_from_directory(
-        DATA_RAW / "Seg_train",
+        TRAIN_DIR,
         target_size=IMG_SIZE,
         batch_size=BATCH,
         class_mode="categorical",
@@ -38,7 +43,7 @@ def make_generators(validation_split=0.20, augment=False):
         seed=SEED)
 
     test_gen = test_datagen.flow_from_directory(
-        DATA_RAW / "Seg_test",
+        TEST_DIR,
         target_size=IMG_SIZE,
         batch_size=BATCH,
         class_mode="categorical",

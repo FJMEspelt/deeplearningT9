@@ -2,7 +2,8 @@ from pathlib import Path
 
 # --- paths ---------------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
-DATA_RAW = ROOT / "data" / "raw"
+TRAIN_DIR = Path("/Users/javiermolinaespelt/Documents/Master IA/deeplearningT9/data/raw/seg_train/seg_train")
+TEST_DIR  = Path("/Users/javiermolinaespelt/Documents/Master IA/deeplearningT9/data/raw/seg_test/seg_test")
 DATA_PROC = ROOT / "data" / "processed"
 MODELS = ROOT / "saved_models"
 HISTORIES = ROOT / "histories"
